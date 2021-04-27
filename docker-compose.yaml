@@ -7,7 +7,7 @@ services:
           dockerfile: .docker/app/Dockerfile
           context: .
           target: dev
-        container_name: dashpag-app
+        container_name: cleanphp-app
         entrypoint: dockerize -template /templates/.env:.env -wait tcp://db:3306 -timeout 40s /entrypoint.sh
         volumes:
             - ./www:/var/www
@@ -19,7 +19,7 @@ services:
 
     nginx:
         build: .docker/nginx
-        container_name: dashpag-nginx
+        container_name: cleanphp-nginx
         restart: always
         tty: true
         ports:
@@ -33,7 +33,7 @@ services:
 
     db:
         build: ./.docker/mysql
-        container_name: dashpag-db
+        container_name: cleanphp-db
         restart: always
         tty: true
         ports:
@@ -48,7 +48,7 @@ services:
 
     redis:
         image: redis:alpine
-        container_name: dashpag-redis
+        container_name: cleanphp-redis
         expose:
             - 6379
         networks:

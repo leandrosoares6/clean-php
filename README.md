@@ -1,16 +1,16 @@
-## Descrição
+## Description
 
-Backend do DashPag, a ferramenta de gerenciamento de fluxo de caixa.
+A Study Case of Clean Architecture from book `The Clean Architecture in PHP` by Kristopher Wilson.
 
-## Rodar a aplicação
+## Running app
 
-#### Crie os containers com Docker
+#### Creating docker containers
 
 ```bash
 $ docker-compose up
 ```
 
-#### Accesse no browser
+#### Accessing in the browser
 
 ```
 http://localhost:8000
